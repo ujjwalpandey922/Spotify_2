@@ -13,7 +13,7 @@ import "swiper/css/free-mode";
 const TopChartCard = ({song,i,isPlaying, activeSong,
   handlePauseClick, handlePlayClick,})=>(
   <div className="w-full flex flex-row items-center hover:bg-[#4c426e] 
-  py-2 p-4 rounded-lg cursor-pointer mb-2">
+  py-1 p-3 rounded-lg cursor-pointer mb-2">
    <h3 className="font-bold text-base text-white mr-3">{i+1}.</h3>
    <div className="flex flex-1 w-100 justify-between items-center">
     <img src={song?.images?.coverart} alt={song.name} className="w-20 h-20 rounded-lg"/>
@@ -51,7 +51,7 @@ const TopPlay = () => {
   })
   
   return (
-    <div className=" xl:ml-6 xl:mb-0 xl:max-w-[450px] ml-0 mb-6 flex-1 flex flex-col max-w-full space-y-5" ref={divRef}>
+    <div className=" xl:ml-6 xl:mb-0 xl:max-w-[380px] ml-0 mb-2 flex-1 flex flex-col max-w-full space-y-1" ref={divRef}>
       <div className="  flex flex-col w-full">
         <div className="  flex flex-row justify-between items-center">
           <h2 className="text-white font-bold text-xl">Top Charts</h2>
@@ -59,7 +59,7 @@ const TopPlay = () => {
           <p className="text-gray-300 cursor-pointer font-bold "> See More</p>
           </Link> 
         </div>
-        <div className="flex flex-col gap-1 mt-4 ">
+        <div className="flex flex-col gap-1 mt-1 ">
           {topPlay?.map((song,i)=>(
             <TopChartCard song={song} i={i} key={song.key} isPlaying={isPlaying} activeSong={activeSong}
             handlePauseClick={handlePauseClick} handlePlayClick={handlePlayClick}

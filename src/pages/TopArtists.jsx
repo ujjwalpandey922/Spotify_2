@@ -10,7 +10,7 @@ if(error) return <Error/>
     return (
     <div className='flex flex-col'>
         <h2 className='font-bold text-3xl text-white text-left mt-3 mb-5'> Top Artists </h2>
-        <div className="flex flex-wrap justify-center gap-8 sm:justify-start ">
+        <div className="flex flex-wrap justify-center gap-7 sm:justify-start ">
             {data.map((e)=>(
                 <ArtistCard key={e.key} track={e}/>
             ))}

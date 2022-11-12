@@ -12,16 +12,16 @@ const Discover = () => {
     if(error) return <Error/>
 return(
 <div className="flex flex-col">
-    <div className="w-full flex justify-between items-center flex-col mt-4 mb-10 sm:flex-row ">
-        <h2 className="text-red-500 font-mono font-bold text-4xl">Discover... {genreListId}</h2>
+    <div className="w-full flex justify-between items-center flex-col  mb-4 sm:flex-row ">
+        <h2 className="text-red-500 font-mono font-bold text-4xl">Discover {genreListId}</h2>
         <select name="" id="" value={genreListId||"pop"} onChange={(e)=>dispatch(selectGenreListId(e.target.value))} 
         className="bg-black text-red-500 p-3 text-sm 
-        rounded-xl outline-none cursor-pointer  mt-5 sm:mt-0">
+        rounded-xl outline-none cursor-pointer  mt-2 sm:mt-0">
             {genres.map((e)=> <option key={e.value} value={e.value}>{e.title} </option>)}
         </select>
 
     </div>
-    <div className="flex flex-wrap justify-center gap-8 sm:justify-start">
+    <div className="flex flex-wrap justify-center gap-10 sm:justify-start">
         {data?.map((song,i)=>(
             <SongCard key={song.key} song={song} i={i} data={data} activeSong={activeSong} isPlaying={isPlaying}/>
         ))}
